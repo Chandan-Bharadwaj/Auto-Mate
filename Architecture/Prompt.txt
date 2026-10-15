@@ -1,0 +1,37 @@
+We have a major shift in workflow:
+- we are going to use FreeCAD from now on as out platform.
+    - FreeCAD is installed in the system
+    - its module folder is present in the location:  (record this in the specification)
+    - This folder is now our production. all developed code to go to this folder as a packeged command
+- Refer to the  document  knowledgeDocs/Tech/FreeCAD Python Feature Recognition.md to get a primer of how to develop using FreeCAD. I need a detailed reply regarding how much you are able to grap and wheter you can furter refer to the online documentation of FreeCAD python customixation for further development.
+
+-Deliverables:
+    - a custom command in FreeCAD
+    - we need a draft/mock algorithm (in accordance of the Specifications) that can be extended and replced in the future.
+    - for now we need a dummy implementation 
+        - takes note of the all parts and assemblies that the command is in context of
+        - that takes in a list of surfaces as input
+        - that only gives us random set o
+
+- I need a script called updateProduction.py taht handles the copying of the latest version of the command we will devellop. Sice this folder need admin rights. the script should be able to handle this. what is best way to do it ?
+
+- Tech stack:
+ - FreeCAD
+ - PythonOCC
+
+- Command specifics:
+    - going back to modular design  of the project, ensure we have all those design aspects covered in the new updates.
+We need to completely overhaul the specification file to reflect the above workflow. now remenants of the older workflow is to bve removed.
+    - the command should have three phases:
+        - selection phase
+        - compute phase
+        - display output phase 
+    -   The command should have a selection button that puts th eocmmand to a selection phase.
+        - clicking on the command again will finalise set of srufaces and the make the command move to a compute phase.
+            - the algorithm will be called here
+
+- Algorithm specifics:
+    - takes note of the all parts and assemblies that the command is in context of
+    - that takes in a list of surfaces as input
+    - that only gives us a random set of outputs (list of list of surfaces) for now..
+
