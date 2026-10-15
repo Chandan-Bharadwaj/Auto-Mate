@@ -10,6 +10,14 @@ Select faces on **one** part in a FreeCAD assembly; Auto-Mate searches other par
 
 We do **not** treat mating as “find every cylinder and plane in the model, cluster features, then match by type.” We **do** treat your selection as a **local graph pattern**, align it to candidate parts with a **scored heuristic** (beam search), then **verify** with pose and fit. Analytic surface kinds support **measurement after mapping**, not global feature identification. Full narrative: [Auto-Mating.md](Auto-Mating.md) (design intent and macro/micro).
 
+The default is currently a heuristic, not a trained AI model. Its explicit
+weights, penalties, tolerances, and preferences provide an inspectable baseline
+for tuning against real assemblies and a path toward future AI-based matching.
+The direction is to reduce dependence on hard-coded global geometry-type
+assumptions, not to discard geometry: pose and fit remain verification checks.
+See [TWEAKABLE_PARAMETERS.md](TWEAKABLE_PARAMETERS.md) for the documented
+controls and code-level parameters.
+
 ## End-to-end flow
 
 ```mermaid

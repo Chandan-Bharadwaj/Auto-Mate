@@ -27,6 +27,8 @@ See also: [OVERVIEW.md](OVERVIEW.md).
 
 - Graph nodes and comparators stay **generic** so richer descriptors can plug in over time.
 - Plane/cylinder rules apply as **local measurements on mapped pairs** after alignment, not as the discovery step.
+- The current search is a **heuristic**, not a trained AI model. Its explicit weights, penalties, tolerances, and preferences are a transparent baseline to tune and evaluate against assembly examples, and a step toward future AI-based matching. See [TWEAKABLE_PARAMETERS.md](TWEAKABLE_PARAMETERS.md) for the current parameter catalog.
+- The goal is to move beyond hard-coded global geometry-type assumptions, not to remove geometry: pose and fit still verify candidate placements after graph alignment.
 
 Historical AAG/VF2-only narrative: [LEGACY_AAG.md](LEGACY_AAG.md).
 

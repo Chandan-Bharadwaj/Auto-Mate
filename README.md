@@ -6,6 +6,14 @@ algorithm aligns a graph pattern to candidate parts, checks pose and fit, and
 returns a ranked list with a **mating report** that explains pairings and
 rejections.
 
+The current implementation is a transparent heuristic, not a trained AI model.
+Its explicit scoring weights, preferences, and tolerances make it possible to
+tune and evaluate matching behavior as a step toward a future AI-based
+solution, rather than relying on hard-coded global geometry-type assumptions.
+Geometry still matters: pose and fit checks verify proposed matches. See the
+[tweakable parameter catalog](Architecture/TWEAKABLE_PARAMETERS.md) for the
+current controls and code-level settings.
+
 Architecture: [Architecture/OVERVIEW.md](Architecture/OVERVIEW.md).
 
 ## Prerequisites
